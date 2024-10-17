@@ -90,9 +90,9 @@ const AboutMe = () => {
                 className="flex flex-col items-center gap-4 p-4 bg-gray-800 rounded-lg shadow-lg hover:bg-gray-700 transition duration-200 ease-in-out"
                 initial={{ opacity: 0, x: direction.x, y: direction.y }}
                 whileInView={{ opacity: 1, x: 0, y: 0 }}
-                whileHover={{ scale: 1.05 }} // Scale effect on hover
+                whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.5 }}
-                viewport={{ once: false }} // Trigger animation when skill comes into view
+                viewport={{ once: false }} 
               >
                 <div className="text-5xl">{skill.icon}</div>
                 <h2 className="text-lg font-semibold">{skill.name}</h2>

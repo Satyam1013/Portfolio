@@ -30,7 +30,7 @@ const Banner = () => {
   // ============ Navbar Render =============
   const renderDesktopNavbar = () => (
     <div className="hidden md:flex gap-10 items-center">
-      {["home", "about", "portfolio", "contact"].map((section) => (
+      {["home", "about", "projects", "contact"].map((section) => (
         <Link
           key={section}
           to={section}
@@ -43,9 +43,8 @@ const Banner = () => {
           {capitalize(section)}
         </Link>
       ))}
-      {/* Resume link */}
       <a
-        href="/SatyamResume.pdf" // Link to the resume in the public folder
+        href="/SatyamResume.pdf"
         download
         className="text-xl font-semibold text-gray-300 hover:text-white duration-300 cursor-pointer"
       >
@@ -59,7 +58,7 @@ const Banner = () => {
     str.charAt(0).toUpperCase() + str.slice(1);
 
   return (
-    <div id="home" className="w-full h-[700px] relative">
+    <div id="home" className="w-full h-[700px] relative bg-black">
       <Design />
       <div className="absolute left-0 top-0 w-full h-[700px] bg-black bg-opacity-10">
         <nav
@@ -111,7 +110,7 @@ const Banner = () => {
           >
             <div className="w-4/5 px-12">
               <ul className="flex flex-col gap-2">
-                {["home", "about", "portfolio", "contact"].map((section) => (
+                {["home", "about", "projects", "contact"].map((section) => (
                   <Link
                     key={section}
                     to={section}

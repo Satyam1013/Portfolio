@@ -18,7 +18,7 @@ const Contact = () => {
       setErrMsg("Enter your Messages");
     } else {
       setSuccessMsg(
-        `Hell dear ${username}, Thank you for your Messages. Additional Information will send to you shortly via your email at ${email}`
+        `Hello dear ${username}, Thank you for your Messages. Additional Information will send to you shortly via your email at ${email}`
       );
     }
   };
@@ -40,7 +40,7 @@ const Contact = () => {
             </div>
             <div className="flex flex-col items-center gap-3">
               <FaPhoneAlt className="text-4xl text-designColor" />
-              <p className="text-sm tracking-wide">+9424919969</p>
+              <p className="text-sm tracking-wide">+91 9424919969</p>
             </div>
             <div className="flex flex-col items-center gap-3">
               <FaEnvelope className="text-4xl text-designColor" />

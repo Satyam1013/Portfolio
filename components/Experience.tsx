@@ -3,7 +3,7 @@ import { FaClock, FaUniversity } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { SiJavascript, SiReact } from "react-icons/si";
 
-const Experience = () => {
+export default function Experience () {
   return (
     <div className="bg-[#0F1113] text-white py-20 flex items-center justify-center">
       <div className="max-w-5xl mx-auto bg-transparent">
@@ -104,5 +104,3 @@ const Experience = () => {
     </div>
   );
 };
-
-export default Experience;

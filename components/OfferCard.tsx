@@ -1,12 +1,10 @@
-import React, { FunctionComponent } from "react";
-
 interface Props {
-  Icon: React.ElementType
-  title:string
-  subTitle:string
+  Icon: React.ElementType;
+  title: string;
+  subTitle: string;
 }
 
-const OfferCard: FunctionComponent<Props> = ({Icon,title,subTitle}) => {
+export default function OfferCard({ Icon, title, subTitle }: Props) {
   return (
     <div className="w-full shadow-cardShadow flex flex-col items-center justify-center gap-10 py-16">
       {Icon && <Icon className="text-designColor text-7xl" />}
@@ -19,5 +17,3 @@ const OfferCard: FunctionComponent<Props> = ({Icon,title,subTitle}) => {
     </div>
   );
 }
-
-export default OfferCard
