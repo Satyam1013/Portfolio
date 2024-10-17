@@ -1,71 +1,75 @@
-import Image from "next/image";
-import { bgOne, bgTwo, bgThree, bgFour } from "../public/assets/index";
+import React from 'react';
+import { motion } from 'framer-motion';
+import contactImage from '../public/assets/contact.jpg'; // Adjust the path as needed
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'; // Using react-icons for GitHub and Live links
 
-const Works = () => {
+interface ProjectCardProps {
+  title: string;
+  date: string;
+  techStack: string;
+  description: string;
+  githubLink: string;
+  liveLink: string;
+}
+
+const ProjectCard = ({
+  title,
+  date,
+  techStack,
+  description,
+  githubLink,
+  liveLink,
+}: ProjectCardProps) => {
   return (
-    <section id="portfolio" className="w-full h-full bg-black text-white py-28">
-      <h1 className="text-3xl uppercase tracking-[10px] font-semibold text-center">
-        Featured Works.
-      </h1>
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-0 h-[1000px] md:h-[480px] mt-16 px-6">
-        <div className="w-full h-full relative overflow-hidden group">
-          <Image
-            className="w-full h-full object-cover scale-125 group-hover:scale-100 duration-500"
-            src={bgOne}
-            alt="bgOne"
-          />
-          <div className="absolute w-full h-[480px] left-0 top-0 ">
-            <div className="w-full h-full relative bg-black bg-opacity-70 hidden group-hover:inline-block transition-opacity duration-500">
-              <h1 className="text-2xl text-center font-bold bg-designColor px-6 py-2 w-60 absolute bottom-10 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                Web design
-              </h1>
-            </div>
-          </div>
-        </div>
-        <div className="w-full h-full relative overflow-hidden group">
-          <Image
-            className="w-full h-full object-cover scale-125 group-hover:scale-100 duration-500"
-            src={bgTwo}
-            alt="bgOne"
-          />
-          <div className="absolute w-full h-[480px] left-0 top-0 ">
-            <div className="w-full h-full relative bg-black bg-opacity-70 hidden group-hover:inline-block transition-opacity duration-500">
-              <h1 className="text-2xl text-center font-bold bg-designColor px-6 py-2 w-60 absolute bottom-10 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                Development
-              </h1>
-            </div>
-          </div>
-        </div>
-        <div className="w-full h-full relative overflow-hidden group">
-          <Image
-            className="w-full h-full object-cover scale-125 group-hover:scale-100 duration-500"
-            src={bgFour}
-            alt="bgFour"
-          />
-          <div className="absolute w-full h-[480px] left-0 top-0 ">
-            <div className="w-full h-full relative bg-black bg-opacity-70 hidden group-hover:inline-block transition-opacity duration-500">
-              <h1 className="text-2xl text-center font-bold bg-designColor px-6 py-2 w-60 absolute bottom-10 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                UI Design
-              </h1>
-            </div>
-          </div>
-        </div>
-        <div className="w-full h-full relative overflow-hidden group">
-          <Image
-            className="w-full h-full object-cover scale-125 group-hover:scale-100 duration-500"
-            src={bgThree}
-            alt="bgThree"
-          />
-          <div className="absolute w-full h-[480px] left-0 top-0 ">
-            <div className="w-full h-full relative bg-black bg-opacity-70 hidden group-hover:inline-block transition-opacity duration-500">
-              <h1 className="text-2xl text-center font-bold bg-designColor px-6 py-2 w-60 absolute bottom-10 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                Interior Design
-              </h1>
-            </div>
-          </div>
-        </div>
+    <motion.div
+      className="bg-white rounded-lg shadow-lg p-6 flex flex-col justify-between"
+      initial={{ opacity: 0, translateY: 20 }}
+      animate={{ opacity: 1, translateY: 0 }}
+      transition={{ duration: 0.5 }}
+      style={{
+        backgroundImage: `url(${contactImage.src})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
+      <h2 className="text-2xl font-bold mb-2">{title}</h2>
+      <p className="text-gray-500 mb-2">{date}</p>
+      <h3 className="font-semibold">Description:</h3>
+      <p className="text-gray-700">{description}</p>
+      <h3 className="font-semibold">Tech Stack:</h3>
+      <p className="text-gray-700 mb-4">{techStack}</p>
+      <div className="flex justify-between items-center">
+        <a href={githubLink} target="_blank" rel="noopener noreferrer">
+          <FaGithub className="text-gray-700 hover:text-designColor" size={24} />
+        </a>
+        <a href={liveLink} target="_blank" rel="noopener noreferrer">
+          <FaExternalLinkAlt className="text-gray-700 hover:text-designColor" size={24} />
+        </a>
       </div>
-    </section>
+    </motion.div>
+  );
+};
+
+const Works: React.FC = () => {
+  return (
+    <div className="container mx-auto my-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <ProjectCard
+        title="E-Shop"
+        date="Apr 2023 - Apr 2023"
+        techStack="React JS, TypeScript, Node.js, Express.js, Chakra UI, MongoDB, REST APIs"
+        description="E-Shop is a fully functional Indian e-commerce web application that allows users to browse and purchase a variety of products."
+        githubLink="https://github.com/Satyam1013/E-Shop" 
+        liveLink="https://eshop-vert.vercel.app/"
+      />
+      <ProjectCard
+        title="Blij-Mart"
+        date="Jan 2023 - Feb 2023"
+        techStack="JavaScript, HTML, CSS, Bootstrap"
+        description="Blij-Mart is an e-commerce website where you can purchase a variety of products."
+        githubLink="https://github.com/Satyam1013/BlijMart" 
+        liveLink="http://www.blijmart.com/"
+      />
+    </div>
   );
 };
 
