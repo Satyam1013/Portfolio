@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import Design from "./Design";
 
-export default function Banner () {
+export default function Banner() {
   const ref = useRef<string | any>("");
 
   function handleClick(e: any) {
@@ -124,6 +124,13 @@ export default function Banner () {
                     {capitalize(section)}
                   </Link>
                 ))}
+                <a
+                  href="/SatyamResume.pdf"
+                  download
+                  className="text-xl font-semibold text-gray-300 hover:text-white duration-300 cursor-pointer"
+                >
+                  Resume
+                </a>
               </ul>
               <div className="text-lg font-thin mt-32">
                 <p>For project inquiries</p>
@@ -135,7 +142,7 @@ export default function Banner () {
                 </p>
               </div>
             </div>
-            <div className="w-1/5 h-full border-l-[1px] text-center flex items-center justify-center">
+            <div className="w-1/5 h-1/5 border-l-[1px] text-center flex items-center justify-center">
               <button
                 onClick={() => setMenu(false)}
                 className="text-3xl font-black text-designColor"
@@ -148,4 +155,4 @@ export default function Banner () {
       )}
     </div>
   );
-};
+}

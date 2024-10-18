@@ -65,23 +65,42 @@ const AboutMe = () => {
         <h1 className="text-3xl uppercase font-semibold text-center">
           A Story about me.
         </h1>
-        <p className="text-xl md:text-3xl font-medium md:leading-relaxed text-textColor">
-          Hi, I'm a{" "}
-          <span className="font-bold text-white">Software Developer</span> with 
-          <span className="font-bold text-white"> 1.5 years</span> of experience in building dynamic websites and robust
-          applications. My expertise includes a strong foundation in data
-          structures and algorithms, which enables me to solve complex problems
-          efficiently. Currently, I work at Prodios Labs, where I contribute to
-          critical projects for the Uttarakhand government, focusing on scalable
-          and impactful solutions.
-        </p>
+        <div className="max-w-6xl mx-auto px-4 md:px-6">
+          <p
+            className="
+      text-base sm:text-lg md:text-xl lg:text-2xl 
+      font-medium 
+      leading-snug md:leading-relaxed 
+      text-justify 
+      text-textColor
+    "
+          >
+            Hello, I am a{" "}
+            <span className="font-extrabold text-white">
+              Software Developer
+            </span>{" "}
+            with
+            <span className="font-extrabold text-white"> 1.5+ years</span> of
+            hands-on experience in designing dynamic websites and building
+            scalable applications. My expertise extends to{" "}
+            <span className="font-bold text-white">
+              data structures and algorithms
+            </span>
+            , enabling me to solve complex challenges with efficient solutions.
+            Currently, I am a key contributor at
+            <span className="font-bold text-white"> Prodios Labs</span>, where I
+            work on strategic government projects for Uttarakhand. I specialize
+            in delivering high-impact, scalable solutions that align with
+            business goals and create tangible value.
+          </p>
+        </div>
 
-        <h2 className="text-3xl uppercase font-semibold text-center mt-16">
+        <h2 className="text-3xl uppercase font-semibold text-center mt-6">
           My Skills
         </h2>
 
         {/* Skills Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 m-5">
           {skills.map((skill, index) => {
             const direction = directionStyles[index % directionStyles.length];
             return (
@@ -92,7 +111,7 @@ const AboutMe = () => {
                 whileInView={{ opacity: 1, x: 0, y: 0 }}
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.5 }}
-                viewport={{ once: false }} 
+                viewport={{ once: false }}
               >
                 <div className="text-5xl">{skill.icon}</div>
                 <h2 className="text-lg font-semibold">{skill.name}</h2>

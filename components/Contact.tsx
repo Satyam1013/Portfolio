@@ -23,12 +23,7 @@ const Contact = () => {
     else {
       setErrMsg("");
 
-      // Send the email using EmailJS
-      const templateParams = {
-        username,
-        user_email: email,
-        message,
-      };
+      const templateParams = { username, user_email: email, message };
 
       emailjs
         .send(
@@ -63,8 +58,8 @@ const Contact = () => {
           Contact Me
         </h2>
 
-        {/* Contact Info Cards */}
-        <div className="flex flex-col md:flex-row justify-center items-center gap-8 mb-16">
+        {/* Responsive Contact Info Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {[
             {
               icon: <FaMap className="text-designColor" />,
@@ -81,7 +76,7 @@ const Contact = () => {
           ].map((item, index) => (
             <motion.div
               key={index}
-              className="w-full max-w-md p-8 shadow-lg rounded-xl bg-gray-800 text-center hover:scale-105 transition-transform duration-500"
+              className="w-full p-8 shadow-lg rounded-xl bg-gray-800 text-center hover:scale-105 transition-transform duration-500"
               initial="hidden"
               whileInView="visible"
               whileHover={{ scale: 1.05 }}
@@ -91,7 +86,7 @@ const Contact = () => {
               <div className="text-4xl flex justify-center mb-4">
                 {item.icon}
               </div>
-              <p className="text-lg font-semibold truncate">{item.text}</p>
+              <p className="text-lg font-semibold">{item.text}</p>
             </motion.div>
           ))}
         </div>
