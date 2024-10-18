@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import Design from "./Design";
 
-const Banner = () => {
+export default function Banner () {
   const ref = useRef<string | any>("");
 
   function handleClick(e: any) {
@@ -149,5 +149,3 @@ const Banner = () => {
     </div>
   );
 };
-
-export default Banner;

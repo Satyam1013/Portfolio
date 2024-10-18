@@ -3,7 +3,7 @@ import type { Container, Engine } from "tsparticles-engine";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
-const Design = () => {
+export default function Design() {
   const [scrollY, setScrollY] = useState(0);
 
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -22,18 +22,14 @@ const Design = () => {
     };
   }, []);
 
-  // Calculate the scaling factor based on scroll position
-  const scale = Math.max(1 - scrollY / 500, 0); // Adjust the divisor to control scale speed and limit scaling to 0
-
-  // Determine background color based on scale
-  const bgColor = scale <= 0 ? "black" : "transparent"; // Change to black when scale is 0
+  const scale = Math.max(1 - scrollY / 500, 0);
 
   const bgStyle = {
-    backgroundImage: "url('assets/bg.jpg')", // Replace with your image URL
-    backgroundSize: `${scale * 100}vw ${scale * 100}vh`, // Scale the image based on the calculated factor
+    backgroundImage: "url('assets/bg.jpg')",
+    backgroundSize: `${scale * 100}vw ${scale * 100}vh`,
     backgroundPosition: "center",
-    transition: "background-size 0.3s ease-in-out, background-color 0.3s ease-in-out", // Smooth transition for both properties
-    backgroundColor: bgColor, // Set background color
+    transition:
+      "background-size 0.3s ease-in-out, background-color 0.3s ease-in-out",
   };
 
   return (
@@ -113,6 +109,4 @@ const Design = () => {
       </div>
     </div>
   );
-};
-
-export default Design;
+}

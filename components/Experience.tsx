@@ -1,7 +1,7 @@
 import React from "react";
 import { FaClock, FaUniversity } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { SiJavascript, SiReact } from "react-icons/si";
+import { SiJavascript, SiNodedotjs } from "react-icons/si";
 
 export default function Experience () {
   return (
@@ -20,7 +20,7 @@ export default function Experience () {
           >
             <div className="grid grid-cols-2 gap-4">
               <div className="flex items-center">
-                <SiReact className="text-designColor mr-2 text-2xl" />
+                <SiNodedotjs className="text-designColor mr-2 text-2xl" />
                 <h2 className="text-xl font-semibold">Software Developer</h2>
               </div>
               <div className="text-sm text-right">
