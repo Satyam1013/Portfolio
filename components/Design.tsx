@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import type { Container, Engine } from "tsparticles-engine";
+import type { Engine } from "tsparticles-engine";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
@@ -26,10 +26,12 @@ export default function Design() {
 
   const bgStyle = {
     backgroundImage: "url('assets/bg.jpg')",
-    backgroundSize: `${scale * 100}vw ${scale * 100}vh`,
-    backgroundPosition: "center",
-    transition:
-      "background-size 0.3s ease-in-out, background-color 0.3s ease-in-out",
+    backgroundSize: "cover", // Ensures no stretching
+    backgroundPosition: "top center", // Aligns the image to the top
+    backgroundRepeat: "no-repeat", // Prevents tiling
+    aspectRatio: "16 / 9", // Maintain 16:9 ratio
+    height: `${scale * 100}vh`, // Dynamically adjust height on scroll
+    transition: "background-size 0.3s ease-in-out, height 0.3s ease-in-out",
   };
 
   return (

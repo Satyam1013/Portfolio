@@ -4,20 +4,12 @@ import { Link } from "react-scroll";
 import Design from "./Design";
 
 export default function Banner() {
-  const ref = useRef<string | any>("");
-
-  function handleClick(e: any) {
-    if (e.target.contains(ref.current)) {
-      setMenu(false);
-    }
-  }
-
-  // ============ Nav Style Start here =============
+  const ref = useRef<HTMLDivElement | null>(null);
   const [navColor, setNavColor] = useState("transparent");
   const [menu, setMenu] = useState(false);
 
   const listenScrollEvent = () => {
-    window.scrollY > 10 ? setNavColor("#000000") : setNavColor("transparent");
+    setNavColor(window.scrollY > 10 ? "#000000" : "transparent");
   };
 
   useEffect(() => {
@@ -27,7 +19,15 @@ export default function Banner() {
     };
   }, []);
 
-  // ============ Navbar Render =============
+  function handleClick(e: React.MouseEvent) {
+    if (ref.current && ref.current.contains(e.target as Node)) {
+      setMenu(false);
+    }
+  }
+
+  const capitalize = (str: string) =>
+    str.charAt(0).toUpperCase() + str.slice(1);
+
   const renderDesktopNavbar = () => (
     <div className="hidden md:flex gap-10 items-center">
       {["home", "about", "projects", "contact"].map((section) => (
@@ -53,22 +53,15 @@ export default function Banner() {
     </div>
   );
 
-  // Helper function to capitalize words
-  const capitalize = (str: string) =>
-    str.charAt(0).toUpperCase() + str.slice(1);
-
   return (
-    <div id="home" className="w-full h-[700px] relative bg-black">
+    <div id="home" className="w-full h-screen relative bg-black">
       <Design />
-      <div className="absolute left-0 top-0 w-full h-[700px] bg-black bg-opacity-10">
+      <div className="absolute inset-0 bg-black bg-opacity-10">
         <nav
-          style={{
-            backgroundColor: navColor,
-            transition: "all 0.5s ease",
-          }}
-          className="w-full px-8 md:px-16 py-6 flex justify-between items-center fixed top-0 z-40"
+          style={{ backgroundColor: navColor, transition: "all 0.5s ease" }}
+          className="w-full px-6 md:px-16 py-6 flex justify-between items-center fixed top-0 z-40"
         >
-          <h1 className="font-bodyFont text-4xl text-white font-extrabold border-2 w-12 text-center">
+          <h1 className="text-4xl text-white font-extrabold border-2 w-12 text-center">
             S
           </h1>
 
@@ -85,12 +78,17 @@ export default function Banner() {
         </nav>
 
         {/* Banner Content */}
-        <div className="w-full h-full flex flex-col justify-center items-center text-white px-4">
-          <h1 className="text-[50px] md:text-[80px] lg:text-[100px] font-black">
+        <div className="w-full h-full flex flex-col justify-center items-center text-center px-6">
+          <h1
+            className="whitespace-nowrap font-black text-white leading-tight"
+            style={{
+              fontSize: "clamp(2rem, 6vw, 6rem)", // Dynamically scales the font size
+            }}
+          >
             I'm Satyam Banwale
           </h1>
-          <div className="flex items-center gap-2 md:gap-6 text-base md:text-xl font-bold bg-designColor px-6 py-3">
-            <h2 className="tracking-[4px]">SOFTWARE DEVELOPER</h2>
+          <div className="flex items-center gap-2 md:gap-6 text-sm sm:text-lg md:text-xl font-bold bg-designColor px-6 py-3 mt-4">
+            <h2 className="tracking-wider">SOFTWARE DEVELOPER</h2>
           </div>
         </div>
       </div>
@@ -98,7 +96,7 @@ export default function Banner() {
       {/* Mobile Menu */}
       {menu && (
         <div
-          ref={(node) => (ref.current = node)}
+          ref={ref}
           onClick={handleClick}
           className="w-full h-screen bg-black bg-opacity-40 fixed top-0 right-0 flex justify-end z-50"
         >
@@ -106,10 +104,10 @@ export default function Banner() {
             initial={{ x: 500, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="w-full md:w-[60%] lg:w-[40%] h-full bg-[#0F1113] text-white flex items-center justify-center"
+            className="w-full sm:w-[60%] md:w-[40%] h-full bg-[#0F1113] text-white flex items-center justify-center"
           >
-            <div className="w-4/5 px-12">
-              <ul className="flex flex-col gap-2">
+            <div className="w-4/5 px-8 sm:px-12">
+              <ul className="flex flex-col gap-4">
                 {["home", "about", "projects", "contact"].map((section) => (
                   <Link
                     key={section}
@@ -132,7 +130,7 @@ export default function Banner() {
                   Resume
                 </a>
               </ul>
-              <div className="text-lg font-thin mt-32">
+              <div className="text-sm mt-20 text-center">
                 <p>For project inquiries</p>
                 <p>
                   or say 'Hello' -{" "}
@@ -142,7 +140,7 @@ export default function Banner() {
                 </p>
               </div>
             </div>
-            <div className="w-1/5 h-1/5 border-l-[1px] text-center flex items-center justify-center">
+            <div className="w-1/5 text-center flex items-center justify-center border-l-[1px]">
               <button
                 onClick={() => setMenu(false)}
                 className="text-3xl font-black text-designColor"
