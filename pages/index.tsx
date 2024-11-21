@@ -12,7 +12,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Satyam Portfolio</title>
+        <title>Satyam's Portfolio</title>
         <link rel="icon" href="/logo.png" />
       </Head>
 
