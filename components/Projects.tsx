@@ -7,7 +7,7 @@ interface ProjectCardProps {
   date: string;
   techStack: string;
   description: string;
-  responsibilities?: string[];
+  responsibilities: string[];
   githubLink: string;
   liveLink: string;
   images: string[];
@@ -135,9 +135,7 @@ const Project = ({
       whileTap={{ scale: 0.98 }}
     >
       <div className="flex flex-col md:flex-row w-full">
-        {/* Left Section with Title, Description, and Carousel */}
         <div className="w-full md:w-1/2 bg-black">
-          {/* Title and Description Section */}
           <div className="p-6 text-white">
             <div className="space-y-6">
               <div className="flex justify-between items-center">
@@ -162,7 +160,6 @@ const Project = ({
             </div>
           </div>
 
-          {/* Image Carousel */}
           <div className="relative w-full h-auto overflow-hidden">
             <Slider
               {...{
@@ -190,7 +187,6 @@ const Project = ({
           </div>
         </div>
 
-        {/* Right Section with Key Responsibilities and Tech Stack */}
         <div className="w-full md:w-1/2 bg-black p-6 flex flex-col justify-between text-white">
           <div className="space-y-6">
             {responsibilities && (
