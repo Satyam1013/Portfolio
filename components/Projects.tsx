@@ -30,6 +30,8 @@ export default function Projects() {
     "/images/eServices5.png",
   ];
 
+  const itdaImages = ["/images/Itda1.png", "/images/Itda2.png"];
+
   const blijMartImages = [
     "/images/blij1.png",
     "/images/blij2.png",
@@ -51,18 +53,39 @@ export default function Projects() {
             description="Apuni Sarkar, by ITDA, Uttarakhand, is a unified platform for transparent, paperless, and cashless delivery of government services."
             responsibilities={[
               "Designed and implemented cron jobs for automated tasks.",
-              "Collaborated with government departments for service integration.",
-              "Developed interactive dashboards for officers.",
+              "Integrated third-party websites into the portal, enhancing service offerings and improving accessibility for users.",
+              "Aggregated and visualized data in real-time dashboards, improving decision-making and operational efficiency.",
             ]}
             githubLink="https://github.com/prodioslabs/e-district-uk"
             liveLink="https://eservices.uk.gov.in/"
             images={eServicesImages}
           />
           <Project
+            title="ITDA Portal"
+            date="Jan 2024 - Jun 2024"
+            techStack="Nest JS, React JS, TypeScript, Ant Design, MongoDB"
+            description="The ITDA drives ICT projects for Digital Uttarakhand, enhancing citizen life and transparency"
+            responsibilities={[
+              "Engineered and integrated data-driven forms with tabular data to streamline data management and display.",
+              "Collaborated with government departments for service integration.",
+              "Developed interactive dashboards for officers.",
+            ]}
+            githubLink="https://github.com/prodioslabs/itda-website"
+            liveLink="https://itda.uk.gov.in/"
+            images={itdaImages}
+          />
+          <Project
             title="E-Shop"
             date="Apr 2023 - Apr 2023"
             techStack="React JS, TypeScript, Node.js, Express.js, Chakra UI, MongoDB"
             description="A fully functional Indian e-commerce web application allowing users to browse and purchase products."
+            responsibilities={[
+              "Developed the homepage, cart page, product pages, and single product page with responsive design.",
+              "Built an admin panel with a dashboard displaying product counts using Chart.js.",
+              "Implemented features to manage users and products, including adding and removing users and products.",
+              "Integrated functionalities for secure user authentication and authorization using JWT and Bcrypt hashing.",
+              "Enabled product filtering, sorting, and searching to enhance user experience.",
+            ]}
             githubLink="https://github.com/Satyam1013/E-Shop"
             liveLink="https://eshop-vert.vercel.app/"
             images={eShopImages}
@@ -72,6 +95,13 @@ export default function Projects() {
             date="Jan 2023 - Feb 2023"
             techStack="JavaScript, HTML, CSS, Bootstrap"
             description="Blij-Mart is an e-commerce website where you can purchase a variety of products."
+            responsibilities={[
+              "Designed and added a responsive footer section to enhance the website layout.",
+              "Fixed HTML and CSS issues to improve overall page structure and styling consistency.",
+              "Optimized and integrated high-quality images for a better visual experience.",
+              "Collaborated with team members to merge features and ensure seamless integration.",
+              "Utilized Bootstrap for responsive design and consistent UI elements.",
+            ]}
             githubLink="https://github.com/Satyam1013/BlijMart"
             liveLink="http://www.blijmart.com/"
             images={blijMartImages}
@@ -94,7 +124,10 @@ const Project = ({
 }: ProjectCardProps) => {
   return (
     <motion.div
-      className="relative w-11/12 md:w-11/12 mx-auto bg-gray-800 rounded-3xl overflow-hidden shadow-lg"
+      className="relative w-11/12 md:w-11/12 mx-auto rounded-3xl overflow-hidden shadow-lg
+               bg-gradient-to-r from-pink-500 via-indigo-500 to-cyan-500 bg-clip-border
+               animate-shadow-move
+               transition-shadow duration-300"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
@@ -102,54 +135,64 @@ const Project = ({
       whileTap={{ scale: 0.98 }}
     >
       <div className="flex flex-col md:flex-row w-full">
-        <div className="w-full md:w-1/2 relative h-auto overflow-hidden">
-          <Slider
-            {...{
-              dots: false,
-              infinite: true,
-              speed: 500,
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              autoplay: true,
-              autoplaySpeed: 4000,
-              arrows: false,
-            }}
-          >
-            {images.map((src, index) => (
-              <div key={index} className="w-full h-auto">
-                <motion.img
-                  src={src}
-                  alt={`Slide ${index + 1}`}
-                  className="w-full h-auto object-cover transform hover:scale-110 transition-transform duration-300 ease-in-out"
-                  whileHover={{ scale: 1.1 }}
-                />
+        {/* Left Section with Title, Description, and Carousel */}
+        <div className="w-full md:w-1/2 bg-black">
+          {/* Title and Description Section */}
+          <div className="p-6 text-white">
+            <div className="space-y-6">
+              <div className="flex justify-between items-center">
+                <motion.h2
+                  className="text-2xl font-bold"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.2 }}
+                >
+                  {title}
+                </motion.h2>
+                <p className="text-sm text-gray-400 italic">{date}</p>
               </div>
-            ))}
-          </Slider>
-        </div>
-
-        <div className="w-full md:w-1/2 bg-gray-800 p-6 flex flex-col justify-between text-white h-auto">
-          <div className="space-y-6">
-            <div className="flex justify-between items-center">
-              <motion.h2
-                className="text-2xl font-bold"
+              <motion.p
+                className="text-gray-300"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.2 }}
+                transition={{ delay: 0.3 }}
               >
-                {title}
-              </motion.h2>
-              <p className="text-sm text-gray-400 italic">{date}</p>
+                {description}
+              </motion.p>
             </div>
-            <motion.p
-              className="text-gray-300"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3 }}
-            >
-              {description}
-            </motion.p>
+          </div>
 
+          {/* Image Carousel */}
+          <div className="relative w-full h-auto overflow-hidden">
+            <Slider
+              {...{
+                dots: false,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                arrows: false,
+              }}
+            >
+              {images.map((src, index) => (
+                <div key={index} className="w-full h-auto">
+                  <motion.img
+                    src={src}
+                    alt={`Slide ${index + 1}`}
+                    className="w-full h-auto object-cover transform hover:scale-110 transition-transform duration-300 ease-in-out"
+                    whileHover={{ scale: 1.1 }}
+                  />
+                </div>
+              ))}
+            </Slider>
+          </div>
+        </div>
+
+        {/* Right Section with Key Responsibilities and Tech Stack */}
+        <div className="w-full md:w-1/2 bg-black p-6 flex flex-col justify-between text-white">
+          <div className="space-y-6">
             {responsibilities && (
               <motion.div
                 initial={{ opacity: 0 }}
@@ -159,7 +202,7 @@ const Project = ({
                 <h3 className="font-semibold text-lg text-designColor">
                   Key Responsibilities:
                 </h3>
-                <ul className="list-disc list-inside text-gray-300 space-y-2">
+                <ul className="list-disc list-inside text-gray-300 space-y-2 text-justify">
                   {responsibilities.map((item, index) => (
                     <motion.li
                       key={index}
@@ -172,19 +215,20 @@ const Project = ({
                 </ul>
               </motion.div>
             )}
-            <h3 className="font-semibold text-lg text-designColor">
-              Tech Stack:
-            </h3>
-            <motion.p
-              className="text-gray-300"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
-            >
-              {techStack}
-            </motion.p>
+            <div>
+              <h3 className="font-semibold text-lg text-designColor">
+                Tech Stack:
+              </h3>
+              <motion.p
+                className="text-gray-300"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
+              >
+                {techStack}
+              </motion.p>
+            </div>
           </div>
-
           <motion.div
             className="flex space-x-6 pt-6 justify-start"
             initial={{ opacity: 0 }}

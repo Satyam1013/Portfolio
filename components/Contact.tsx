@@ -154,7 +154,7 @@ const Contact = () => {
         <div className="mt-16 text-center text-sm font-light">
           <p>
             For project inquiries, reach out at{" "}
-            <span className="font-semibold text-purple-300 underline">
+            <span className="font-semibold text-designColor underline">
               satyambanwale786@gmail.com
             </span>
           </p>

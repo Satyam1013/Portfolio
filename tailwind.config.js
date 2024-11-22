@@ -7,19 +7,29 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        bodyFont: "Nunito Sans",
-      },
-      backgroundImage: {
-        "hero-image": "url('/assets/bg.jpg')",
-        "contact-image": "url('/assets/contact.jpg')",
+      animation: {
+        "shadow-move": "shadowMove 6s ease infinite",
       },
       colors: {
         designColor: "#FF6347",
         textColor: "#aeaeae",
       },
-      boxShadow: {
-        cardShadow: "0px 0px 5px 10px rgba(0,0,0,0.10)",
+
+      keyframes: {
+        shadowMove: {
+          "0%": {
+            boxShadow:
+              "0px 0px 15px 5px rgba(255, 99, 71, 0.2), 0px 0px 25px 10px rgba(255, 99, 71, 0.1)",
+          },
+          "50%": {
+            boxShadow:
+              "0px 10px 30px 15px rgba(255, 99, 71, 0.2), 0px 10px 50px 20px rgba(255, 99, 71, 0.1)",
+          },
+          "100%": {
+            boxShadow:
+              "0px 0px 15px 5px rgba(255, 99, 71, 0.2), 0px 0px 25px 10px rgba(255, 99, 71, 0.1)",
+          },
+        },
       },
     },
   },
