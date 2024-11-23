@@ -25,7 +25,7 @@ export const ProjectCard = ({
   return (
     <motion.div
       className="relative w-11/12 md:w-11/12 mx-auto rounded-3xl overflow-hidden shadow-lg
-                 bg-gradient-to-r from-pink-500 via-indigo-500 to-cyan-500 bg-clip-border
+                 bg-gradient-to-r from-designColor via-yellow-500 to-black bg-clip-border
                  animate-shadow-move
                  transition-shadow duration-300"
       initial={{ opacity: 0, y: 50 }}
@@ -139,7 +139,7 @@ export const ProjectCard = ({
               transition={{ duration: 0.3 }}
             >
               <FaGithub
-                className="text-gray-300 hover:text-indigo-400 transition-colors duration-200"
+                className="text-gray-300 hover:text-designColor transition-colors duration-200"
                 size={32}
               />
             </motion.a>
@@ -151,7 +151,7 @@ export const ProjectCard = ({
               transition={{ duration: 0.3 }}
             >
               <FaExternalLinkAlt
-                className="text-gray-300 hover:text-indigo-400 transition-colors duration-200"
+                className="text-gray-300 hover:text-designColor transition-colors duration-200"
                 size={32}
               />
             </motion.a>
