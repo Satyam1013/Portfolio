@@ -6,6 +6,7 @@ import {
   FaNodeJs,
   FaDatabase,
   FaNetworkWired,
+  FaCode,
 } from "react-icons/fa";
 import {
   SiNextdotjs,
@@ -24,28 +25,29 @@ import {
 import { motion } from "framer-motion";
 
 const skills = [
-  { name: "HTML5", icon: <FaHtml5 className="text-designColor" /> },
-  { name: "CSS3", icon: <FaCss3Alt className="text-designColor" /> },
-  { name: "JavaScript", icon: <SiJavascript className="text-designColor" /> },
-  { name: "TypeScript", icon: <SiTypescript className="text-designColor" /> },
-  { name: "React JS", icon: <FaReact className="text-designColor" /> },
   { name: "Next JS", icon: <SiNextdotjs className="text-designColor" /> },
   { name: "Nest JS", icon: <SiNestjs className="text-designColor" /> },
-  { name: "Node JS", icon: <FaNodeJs className="text-designColor" /> },
-  { name: "Express JS", icon: <SiExpress className="text-designColor" /> },
+  { name: "TypeScript", icon: <SiTypescript className="text-designColor" /> },
+  { name: "React JS", icon: <FaReact className="text-designColor" /> },
   { name: "MongoDB", icon: <SiMongodb className="text-designColor" /> },
   { name: "Prisma", icon: <SiPrisma className="text-designColor" /> },
+  { name: "Express JS", icon: <SiExpress className="text-designColor" /> },
+  { name: "Zod | Yup", icon: <FaCode className="text-designColor" /> },
+  { name: "Node JS", icon: <FaNodeJs className="text-designColor" /> },
   {
     name: "Tailwind CSS",
     icon: <SiTailwindcss className="text-designColor" />,
   },
+  { name: "JavaScript", icon: <SiJavascript className="text-designColor" /> },
   { name: "Ant Design", icon: <SiAntdesign className="text-designColor" /> },
-  { name: "ShadCN UI", icon: <FaDatabase className="text-designColor" /> },
-  { name: "Chakra UI", icon: <SiChakraui className="text-designColor" /> },
+  { name: "REST API's", icon: <FaDatabase className="text-designColor" /> },
   { name: "React Native", icon: <SiReact className="text-designColor" /> },
+  { name: "tRPC", icon: <FaNetworkWired className="text-designColor" /> },
+  { name: "HTML5", icon: <FaHtml5 className="text-designColor" /> },
+  { name: "CSS3", icon: <FaCss3Alt className="text-designColor" /> },
+  { name: "Chakra UI", icon: <SiChakraui className="text-designColor" /> },
+  { name: "ShadCN UI", icon: <FaDatabase className="text-designColor" /> },
   { name: "Redux", icon: <SiRedux className="text-designColor" /> },
-  { name: "RPC", icon: <FaNetworkWired className="text-designColor" /> },
-  { name: "REST API", icon: <FaDatabase className="text-designColor" /> },
 ];
 
 const directionStyles = [
@@ -56,6 +58,17 @@ const directionStyles = [
 ];
 
 const AboutMe = () => {
+  const splitTextToWords = (text: string) => {
+    return text.split(" ").map((word: string, index: number) => (
+      <span
+        key={index}
+        className="inline-block transition-transform duration-300 hover:scale-125 hover:text-designColor"
+        style={{ margin: "0 2px", display: "inline-block" }}
+      >
+        {word}&nbsp;
+      </span>
+    ));
+  };
   return (
     <section
       id="about"
@@ -75,23 +88,9 @@ const AboutMe = () => {
       text-textColor
     "
           >
-            Hello, I am a{" "}
-            <span className="font-extrabold text-white">
-              Software Developer
-            </span>{" "}
-            with
-            <span className="font-extrabold text-white"> 1.5+ years</span> of
-            hands-on experience in designing dynamic websites and building
-            scalable applications. My expertise extends to{" "}
-            <span className="font-bold text-white">
-              data structures and algorithms
-            </span>
-            , enabling me to solve complex challenges with efficient solutions.
-            Currently, I am a key contributor at
-            <span className="font-bold text-white"> Prodios Labs</span>, where I
-            work on strategic government projects for Uttarakhand. I specialize
-            in delivering high-impact, scalable solutions that align with
-            business goals and create tangible value.
+            {splitTextToWords(
+              `Hello, I am a Software Developer with 1.5+ years of hands-on experience in designing dynamic websites and building scalable applications. My expertise extends to data structures and algorithms, enabling me to solve complex challenges with efficient solutions. Currently, I am a key contributor at Prodios Labs, where I work on strategic government projects for Uttarakhand. I specialize in delivering high-impact, scalable solutions that align with business goals and create tangible value.`
+            )}
           </p>
         </div>
 
@@ -106,7 +105,7 @@ const AboutMe = () => {
             return (
               <motion.div
                 key={skill.name}
-                className="flex flex-col items-center gap-4 p-4 bg-gray-800 rounded-lg shadow-lg hover:bg-gray-700 transition duration-200 ease-in-out"
+                className="flex flex-col items-center gap-4 p-4 bg-cardColor rounded-lg shadow-lg hover:bg-[#413f3f] transition duration-200 ease-in-out"
                 initial={{ opacity: 0, x: direction.x, y: direction.y }}
                 whileInView={{ opacity: 1, x: 0, y: 0 }}
                 whileHover={{ scale: 1.05 }}

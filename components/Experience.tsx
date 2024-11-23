@@ -13,7 +13,7 @@ export default function Experience() {
 
         <div className="flex flex-col gap-6">
           <motion.div
-            className="bg-gray-800 rounded-lg shadow-lg p-4 sm:p-6 transition-transform transform hover:-translate-y-2 hover:shadow-xl"
+            className="bg-cardColor rounded-lg shadow-lg p-4 sm:p-6 transition-transform transform hover:-translate-y-2 hover:shadow-xl"
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             whileHover={{ scale: 1.05 }}
@@ -36,7 +36,7 @@ export default function Experience() {
           </motion.div>
 
           <motion.div
-            className="bg-gray-800 rounded-lg shadow-lg p-4 sm:p-6 transition-transform transform hover:-translate-y-2 hover:shadow-xl"
+            className="bg-cardColor rounded-lg shadow-lg p-4 sm:p-6 transition-transform transform hover:-translate-y-2 hover:shadow-xl"
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
             whileHover={{ scale: 1.05 }}
@@ -65,7 +65,7 @@ export default function Experience() {
 
         <div className="flex flex-col gap-6">
           <motion.div
-            className="bg-gray-800 rounded-lg shadow-lg p-4 sm:p-6 transition-transform transform hover:-translate-y-2 hover:shadow-xl"
+            className="bg-cardColor rounded-lg shadow-lg p-4 sm:p-6 transition-transform transform hover:-translate-y-2 hover:shadow-xl"
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             whileHover={{ scale: 1.05 }}
@@ -90,7 +90,7 @@ export default function Experience() {
           </motion.div>
 
           <motion.div
-            className="bg-gray-800 rounded-lg shadow-lg p-4 sm:p-6 transition-transform transform hover:-translate-y-2 hover:shadow-xl"
+            className="bg-cardColor rounded-lg shadow-lg p-4 sm:p-6 transition-transform transform hover:-translate-y-2 hover:shadow-xl"
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
             whileHover={{ scale: 1.05 }}

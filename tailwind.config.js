@@ -11,7 +11,8 @@ module.exports = {
         "shadow-move": "shadowMove 6s ease infinite",
       },
       colors: {
-        designColor: "#FF6347",
+        designColor: "#FFD700",
+        cardColor: "#191919",
         textColor: "#aeaeae",
       },
 

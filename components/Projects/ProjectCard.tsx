@@ -12,107 +12,7 @@ interface ProjectCardProps {
   liveLink: string;
   images: string[];
 }
-
-export default function Projects() {
-  const eShopImages = [
-    "/images/EShop1.png",
-    "/images/EShop2.png",
-    "/images/EShop3.png",
-    "/images/EShop4.png",
-    "/images/EShop5.png",
-  ];
-
-  const eServicesImages = [
-    "/images/eServices1.png",
-    "/images/eServices2.png",
-    "/images/eServices3.png",
-    "/images/eServices4.png",
-    "/images/eServices5.png",
-  ];
-
-  const itdaImages = ["/images/Itda1.png", "/images/Itda2.png"];
-
-  const blijMartImages = [
-    "/images/blij1.png",
-    "/images/blij2.png",
-    "/images/blij3.png",
-    "/images/blij4.png",
-  ];
-
-  return (
-    <section id="projects" className="w-full min-h-screen px-6 py-16 bg-black">
-      <div className="max-w-screen-xl mx-auto">
-        <h1 className="text-5xl font-extrabold text-white text-center mb-16">
-          My Projects
-        </h1>
-        <div className="space-y-20">
-          <Project
-            title="e-Services (Apuni Sarkar)"
-            date="Apr 2023 - Present"
-            techStack="Nest JS, React JS, TypeScript, Ant Design, MongoDB"
-            description="Apuni Sarkar, by ITDA, Uttarakhand, is a unified platform for transparent, paperless, and cashless delivery of government services."
-            responsibilities={[
-              "Designed and implemented cron jobs for automated tasks.",
-              "Integrated third-party websites into the portal, enhancing service offerings and improving accessibility for users.",
-              "Aggregated and visualized data in real-time dashboards, improving decision-making and operational efficiency.",
-            ]}
-            githubLink="https://github.com/prodioslabs/e-district-uk"
-            liveLink="https://eservices.uk.gov.in/"
-            images={eServicesImages}
-          />
-          <Project
-            title="ITDA Portal"
-            date="Jan 2024 - Jun 2024"
-            techStack="Nest JS, React JS, TypeScript, Ant Design, MongoDB"
-            description="The ITDA drives ICT projects for Digital Uttarakhand, enhancing citizen life and transparency"
-            responsibilities={[
-              "Engineered and integrated data-driven forms with tabular data to streamline data management and display.",
-              "Collaborated with government departments for service integration.",
-              "Developed interactive dashboards for officers.",
-            ]}
-            githubLink="https://github.com/prodioslabs/itda-website"
-            liveLink="https://itda.uk.gov.in/"
-            images={itdaImages}
-          />
-          <Project
-            title="E-Shop"
-            date="Apr 2023 - Apr 2023"
-            techStack="React JS, TypeScript, Node.js, Express.js, Chakra UI, MongoDB"
-            description="A fully functional Indian e-commerce web application allowing users to browse and purchase products."
-            responsibilities={[
-              "Developed the homepage, cart page, product pages, and single product page with responsive design.",
-              "Built an admin panel with a dashboard displaying product counts using Chart.js.",
-              "Implemented features to manage users and products, including adding and removing users and products.",
-              "Integrated functionalities for secure user authentication and authorization using JWT and Bcrypt hashing.",
-              "Enabled product filtering, sorting, and searching to enhance user experience.",
-            ]}
-            githubLink="https://github.com/Satyam1013/E-Shop"
-            liveLink="https://eshop-vert.vercel.app/"
-            images={eShopImages}
-          />
-          <Project
-            title="Blij-Mart"
-            date="Jan 2023 - Feb 2023"
-            techStack="JavaScript, HTML, CSS, Bootstrap"
-            description="Blij-Mart is an e-commerce website where you can purchase a variety of products."
-            responsibilities={[
-              "Designed and added a responsive footer section to enhance the website layout.",
-              "Fixed HTML and CSS issues to improve overall page structure and styling consistency.",
-              "Optimized and integrated high-quality images for a better visual experience.",
-              "Collaborated with team members to merge features and ensure seamless integration.",
-              "Utilized Bootstrap for responsive design and consistent UI elements.",
-            ]}
-            githubLink="https://github.com/Satyam1013/BlijMart"
-            liveLink="http://www.blijmart.com/"
-            images={blijMartImages}
-          />
-        </div>
-      </div>
-    </section>
-  );
-}
-
-const Project = ({
+export const ProjectCard = ({
   title,
   date,
   techStack,
@@ -125,9 +25,9 @@ const Project = ({
   return (
     <motion.div
       className="relative w-11/12 md:w-11/12 mx-auto rounded-3xl overflow-hidden shadow-lg
-               bg-gradient-to-r from-pink-500 via-indigo-500 to-cyan-500 bg-clip-border
-               animate-shadow-move
-               transition-shadow duration-300"
+                 bg-gradient-to-r from-pink-500 via-indigo-500 to-cyan-500 bg-clip-border
+                 animate-shadow-move
+                 transition-shadow duration-300"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}

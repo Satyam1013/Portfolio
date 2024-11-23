@@ -76,7 +76,7 @@ const Contact = () => {
           ].map((item, index) => (
             <motion.div
               key={index}
-              className="w-full p-8 shadow-lg rounded-xl bg-gray-800 text-center hover:scale-105 transition-transform duration-500"
+              className="w-full p-8 shadow-lg rounded-xl bg-cardColor text-center hover:scale-105 transition-transform duration-500"
               initial="hidden"
               whileInView="visible"
               whileHover={{ scale: 1.05 }}

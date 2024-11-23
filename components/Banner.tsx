@@ -80,14 +80,23 @@ export default function Banner() {
         {/* Banner Content */}
         <div className="w-full h-full flex flex-col justify-center items-center text-center px-6">
           <h1
-            className="whitespace-nowrap font-black text-white leading-tight"
+            className="whitespace-nowrap font-black text-white leading-tight overflow-hidden relative"
             style={{
-              fontSize: "clamp(2rem, 6vw, 6rem)", // Dynamically scales the font size
+              fontSize: "clamp(2rem, 6vw, 6rem)",
             }}
           >
-            I'm Satyam Banwale
+            {"I'm Satyam Banwale".split("").map((char, index) => (
+              <span
+                key={index}
+                className="inline-block transition-transform duration-300 cursor-pointer hover:scale-150 hover:text-designColor"
+                style={{ display: char === " " ? "inline" : "inline-block" }}
+              >
+                {char}
+              </span>
+            ))}
           </h1>
-          <div className="flex items-center gap-2 md:gap-6 text-sm sm:text-lg md:text-xl font-bold bg-designColor px-6 py-3 mt-4">
+
+          <div className="flex items-center gap-2 md:gap-6 text-sm sm:text-lg md:text-xl font-bold bg-[#FFD700] px-6 py-3 mt-4">
             <h2 className="tracking-wider">SOFTWARE DEVELOPER</h2>
           </div>
         </div>
