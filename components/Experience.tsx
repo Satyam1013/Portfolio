@@ -6,7 +6,7 @@ import { SiJavascript, SiNodedotjs } from "react-icons/si";
 export default function Experience() {
   return (
     <div className="bg-[#0F1113] text-white py-20 flex items-center justify-center px-4 sm:px-8">
-      <div className="w-full max-w-6xl mx-auto bg-transparent"> 
+      <div className="w-[92%] max-w-6xl mx-auto bg-transparent"> 
         <h1 className="text-2xl sm:text-3xl lg:text-4xl uppercase tracking-[6px] font-semibold text-center mb-12">
           My Experience
         </h1>

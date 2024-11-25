@@ -35,7 +35,7 @@ export const ProjectCard = ({
       whileTap={{ scale: 0.98 }}
     >
       <div className="flex flex-col md:flex-row w-full">
-        <div className="w-full md:w-1/2 bg-black">
+        <div className="w-full md:w-1/2 bg-cardColor">
           <div className="p-6 text-white">
             <div className="space-y-6">
               <div className="flex justify-between items-center">
@@ -87,7 +87,7 @@ export const ProjectCard = ({
           </div>
         </div>
 
-        <div className="w-full md:w-1/2 bg-black p-6 flex flex-col justify-between text-white">
+        <div className="w-full md:w-1/2 bg-cardColor p-6 flex flex-col justify-between text-white">
           <div className="space-y-6">
             {responsibilities && (
               <motion.div
