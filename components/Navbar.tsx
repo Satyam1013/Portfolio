@@ -36,33 +36,6 @@ export default function Navbar() {
   const capitalize = (str: string) =>
     str.charAt(0).toUpperCase() + str.slice(1);
 
-  const renderDesktopNavbar = () => (
-    <div className="hidden md:flex gap-10 items-center">
-      {routes.map((section) => (
-        <Link
-          key={section}
-          to={section}
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-          className="relative text-xl font-semibold text-gray-300 hover:text-white duration-300 cursor-pointer group"
-        >
-          {capitalize(section)}
-          <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-designColor transition-all duration-300 group-hover:w-full"></span>
-        </Link>
-      ))}
-      <a
-        href="/SatyamResume.pdf"
-        download
-        className="relative text-xl font-semibold text-gray-300 hover:text-white duration-300 cursor-pointer group"
-      >
-        Resume
-        <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-designColor transition-all duration-300 group-hover:w-full"></span>
-      </a>
-    </div>
-  );
-
   return (
     <div className="absolute inset-0 bg-black bg-opacity-10">
       <motion.nav
@@ -73,7 +46,7 @@ export default function Navbar() {
         transition={{ duration: 0.5 }}
       >
         <motion.h1
-          className="text-4xl text-white font-extrabold border-2 w-12 text-center"
+          className="text-4xl text-designColor font-extrabold border-2 w-12 text-center"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
@@ -81,7 +54,32 @@ export default function Navbar() {
           S
         </motion.h1>
 
-        {renderDesktopNavbar()}
+        {/* Navbar Desktop*/}
+
+        <div className="hidden md:flex gap-10 items-center">
+          {routes.map((section) => (
+            <Link
+              key={section}
+              to={section}
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className="relative text-xl font-semibold text-gray-300 hover:text-white duration-300 cursor-pointer group"
+            >
+              {capitalize(section)}
+              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-designColor transition-all duration-300 group-hover:w-full"></span>
+            </Link>
+          ))}
+          <a
+            href="/SatyamResume.pdf"
+            download
+            className="relative text-xl font-semibold text-gray-300 hover:text-white duration-300 cursor-pointer group"
+          >
+            Resume
+            <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-designColor transition-all duration-300 group-hover:w-full"></span>
+          </a>
+        </div>
 
         <div
           onClick={() => setMenu(true)}

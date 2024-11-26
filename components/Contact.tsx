@@ -8,7 +8,7 @@ const cardVariant = (direction: any) => ({
   visible: { opacity: 1, x: 0, y: 0, transition: { duration: 0.6 } },
 });
 
-const Contact = () => {
+export default function Contact() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -165,6 +165,4 @@ const Contact = () => {
       </div>
     </section>
   );
-};
-
-export default Contact;
+}

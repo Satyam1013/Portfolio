@@ -57,7 +57,7 @@ const directionStyles = [
   { x: 0, y: 100 }, // from bottom
 ];
 
-const AboutMe = () => {
+export default function AboutMe() {
   const splitTextToWords = (text: string) => {
     return text.split(" ").map((word: string, index: number) => (
       <span
@@ -121,6 +121,4 @@ const AboutMe = () => {
       </div>
     </section>
   );
-};
-
-export default AboutMe;
+}

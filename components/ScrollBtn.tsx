@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { TbChevronRight } from "react-icons/tb";
 
-const ScrollBtn = () => {
+export default function ScrollBtn() {
   useEffect(() => {
     const scrollBtn = document.querySelector(".scrollBtn") as HTMLElement;
     window.onscroll = () => {
@@ -31,6 +31,4 @@ const ScrollBtn = () => {
       </button>
     </div>
   );
-};
-
-export default ScrollBtn;
+}
