@@ -2,7 +2,7 @@
   {
     "title": "e-Services (Apuni Sarkar)",
     "date": "Apr 2023 - Present",
-    "techStack": "Nest JS, React JS, TypeScript, Ant Design, MongoDB",
+    "techStack": "Nest JS, React JS, TypeScript, Ant Design, MongoDB, Excel",
     "description": "Apuni Sarkar, by ITDA, Uttarakhand, is a unified platform for transparent, paperless, and cashless delivery of government services.",
     "responsibilities": [
       "Designed and implemented cron jobs for automated tasks.",
@@ -22,10 +22,10 @@
   {
     "title": "ITDA Portal",
     "date": "Jan 2024 - Jun 2024",
-    "techStack": "Nest JS, React JS, TypeScript, Ant Design, MongoDB",
+    "techStack": "Next.Js, Prisma.Js, tRPC, TypeScript, ShadCN UI, MongoDB, Excel",
     "description": "The ITDA drives ICT projects for Digital Uttarakhand, enhancing citizen life and transparency.",
     "responsibilities": [
-      "Engineered and integrated data-driven forms with tabular data to streamline data management and display.",
+      "Engineered and integrated complicated data-driven forms with tabular data to streamline data management and display.",
       "Collaborated with government departments for service integration.",
       "Developed interactive dashboards for officers."
     ],
