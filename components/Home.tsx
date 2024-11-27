@@ -35,6 +35,7 @@ export default function Home() {
         className="absolute inset-0 z-0 bg-cover bg-no-repeat bg-fixed"
         style={{
           backgroundImage: "url('assets/bg.jpg')",
+          backgroundPosition: "50% 30%",
           transform: `translateY(${bgTranslateY}px)`,
           transition: "transform 0.1s ease-out",
         }}
@@ -85,16 +86,16 @@ export default function Home() {
           }}
         />
       </div>
-
       <div
-        className="absolute inset-0 flex flex-col justify-center items-end z-10 pr-10"
+        className="absolute inset-0 flex flex-col items-center md:items-end md:justify-start lg:justify-center z-10 pt-20 md:pt-24 p-4 md:pr-10 mt-8"
         style={{
           opacity: textOpacity,
           transition: "opacity 0.3s ease-out",
         }}
       >
+        {/* Name Section */}
         <motion.h1
-          className="text-5xl font-extrabold text-transparent bg-clip-text bg-designColor to-indigo-500 leading-tight relative animate-pulse"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-designColor leading-tight relative animate-pulse"
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -102,13 +103,14 @@ export default function Home() {
           I'm Satyam Banwale
         </motion.h1>
 
+        {/* Title Section */}
         <motion.div
-          className="mt-4 relative"
+          className="mt-2 md:mt-4 relative text-center"
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
         >
-          <h2 className="text-2xl font-semibold text-transparent bg-clip-text bg-designColor tracking-wide animate-pulse">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-transparent bg-clip-text bg-designColor tracking-wide animate-pulse">
             Software Developer
           </h2>
           <div
