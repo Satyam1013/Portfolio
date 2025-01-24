@@ -1,8 +1,24 @@
 [
   {
+    "title": "PM Gati Shakti (Unnati)",
+    "date": "Jan 2025 - Present",
+    "techStack": "Nest.Js, Prisma Js, React, TypeScript, PostgreSQL, Excel, tRPC, Tailwind CSS",
+    "description": "Unnati, by the Government of Uttarakhand, is a centralized platform for real-time tracking and management of pending proposals, ensuring seamless communication and timely resolution.",
+    "responsibilities": [
+      "Designed and implemented cron jobs for automated tasks.",
+      "Integrated third-party websites into the portal, enhancing service offerings and improving accessibility for users.",
+      "Aggregated and visualized data in real-time dashboards, improving decision-making and operational efficiency."
+    ],
+    "githubLink": "https://github.com/prodioslabs/uk-grievance",
+    "liveLink": "https://pmgatishakti.uk.gov.in/login",
+    "images": [
+      "/images/Unnati1.png"
+    ]
+  },
+  {
     "title": "e-Services (Apuni Sarkar)",
     "date": "Apr 2023 - Present",
-    "techStack": "Nest JS, React JS, TypeScript, Ant Design, MongoDB, Excel",
+    "techStack": "Nest.Js, React, TypeScript, Ant Design, MongoDB, Excel",
     "description": "Apuni Sarkar, by ITDA, Uttarakhand, is a unified platform for transparent, paperless, and cashless delivery of government services.",
     "responsibilities": [
       "Designed and implemented cron jobs for automated tasks.",
@@ -36,7 +52,7 @@
   {
     "title": "E-Shop",
     "date": "Apr 2023 - Apr 2023",
-    "techStack": "React JS, TypeScript, Node.js, Express.js, Chakra UI, MongoDB",
+    "techStack": "React, TypeScript, Node.js, Express.js, Chakra UI, MongoDB",
     "description": "A fully functional Indian e-commerce web application allowing users to browse and purchase products.",
     "responsibilities": [
       "Developed the homepage, cart page, product pages, and single product page with responsive design.",
