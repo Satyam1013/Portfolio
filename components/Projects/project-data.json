@@ -1,8 +1,8 @@
 [
   {
-    "title": "PM Gati Shakti (Unnati)",
+    "title": "Unnati (PM Gati Shakti)",
     "date": "Jan 2025 - Present",
-    "techStack": "Nest.Js, Prisma Js, React, TypeScript, PostgreSQL, Excel, tRPC, Tailwind CSS",
+    "techStack": "Nest.Js, React, TypeScript, PostgreSQL, Prisma Js, tRPC, Ant Design, Tailwind CSS",
     "description": "Unnati, by the Government of Uttarakhand, is a centralized platform for real-time tracking and management of pending proposals, ensuring seamless communication and timely resolution.",
     "responsibilities": [
       "Designed and implemented cron jobs for automated tasks.",
