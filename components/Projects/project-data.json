@@ -5,9 +5,7 @@
     "techStack": "Nest.Js, React, TypeScript, PostgreSQL, Prisma Js, tRPC, Ant Design, Tailwind CSS",
     "description": "Unnati, by the Government of Uttarakhand, is a centralized platform for real-time tracking and management of pending proposals, ensuring seamless communication and timely resolution.",
     "responsibilities": [
-      "Designed and implemented cron jobs for automated tasks.",
-      "Integrated third-party websites into the portal, enhancing service offerings and improving accessibility for users.",
-      "Aggregated and visualized data in real-time dashboards, improving decision-making and operational efficiency."
+      "Build State Disaster Relief Fund (SDRF) Dashboard"
     ],
     "githubLink": "https://github.com/prodioslabs/uk-grievance",
     "liveLink": "https://pmgatishakti.uk.gov.in/login",

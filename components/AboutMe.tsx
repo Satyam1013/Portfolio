@@ -89,7 +89,7 @@ export default function AboutMe() {
     "
           >
             {splitTextToWords(
-              `Hello, I am a Software Developer with 1.5+ years of hands-on experience in designing dynamic websites and building scalable applications. My expertise extends to data structures and algorithms, enabling me to solve complex challenges with efficient solutions. Currently, I am a key contributor at Prodios Labs, where I work on strategic government projects for Uttarakhand. I specialize in delivering high-impact, scalable solutions that align with business goals and create tangible value.`
+              `Hello, I am a Software Developer with 2+ years of hands-on experience in designing dynamic websites and building scalable applications. My expertise extends to data structures and algorithms, enabling me to solve complex challenges with efficient solutions. Currently, I am a key contributor at Prodios Labs, where I work on strategic government projects for Uttarakhand. I specialize in delivering high-impact, scalable solutions that align with business goals and create tangible value.`
             )}
           </p>
         </div>
