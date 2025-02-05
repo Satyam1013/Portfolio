@@ -1,21 +1,43 @@
 [
   {
+    "title": "Funelli",
+    "date": "Jan 2025 - Present",
+    "associatedWith": "Freelance",
+    "techStack": "React, TypeScript, Redis, Shadcn-UI, Supabase",
+    "description": "We envision a future where intelligent technology transforms businesses. Our goal is to empower organizations worldwide with innovative, scalable solutions that drive lasting growth.",
+    "responsibilities": [
+      "Developed a job portal for candidates to apply for positions seamlessly.",
+      "Built an admin panel with full control over candidate management, onboarding, and reporting.",
+      "Implemented authentication, authorization, and data security using Supabase.",
+      "Designed a responsive and user-friendly UI with Shadcn-UI.",
+      "Optimized performance with Redis for caching and faster data retrieval."
+    ],
+    "githubLink": "https://github.com/Satyam1013/funelli-employee-hub",
+    "liveLink": "https://funelli.co.uk/",
+    "images": [
+      "/images/funelli1.png",
+      "/images/funelli2.png",
+      "/images/funelli3.png",
+      "/images/funelli4.png",
+      "/images/funelli5.png",
+      "/images/funelli6.png"
+    ]
+  },
+  {
     "title": "Unnati (PM Gati Shakti)",
     "date": "Jan 2025 - Present",
-    "techStack": "Nest.Js, React, TypeScript, PostgreSQL, Prisma Js, tRPC, Ant Design, Tailwind CSS",
+    "associatedWith": "Government of Uttarakhand",
+    "techStack": "Nest.Js, React, Docker, TypeScript, PostgreSQL, Prisma Js, Ant Design, Tailwind CSS",
     "description": "Unnati, by the Government of Uttarakhand, is a centralized platform for real-time tracking and management of pending proposals, ensuring seamless communication and timely resolution.",
-    "responsibilities": [
-      "Build State Disaster Relief Fund (SDRF) Dashboard"
-    ],
+    "responsibilities": ["Built the State Disaster Relief Fund (SDRF) Dashboard"],
     "githubLink": "https://github.com/prodioslabs/uk-grievance",
     "liveLink": "https://pmgatishakti.uk.gov.in/login",
-    "images": [
-      "/images/Unnati1.png"
-    ]
+    "images": ["/images/Unnati1.png"]
   },
   {
     "title": "e-Services (Apuni Sarkar)",
     "date": "Apr 2023 - Present",
+    "associatedWith": "Government of Uttarakhand",
     "techStack": "Nest.Js, React, TypeScript, Ant Design, MongoDB, Excel",
     "description": "Apuni Sarkar, by ITDA, Uttarakhand, is a unified platform for transparent, paperless, and cashless delivery of government services.",
     "responsibilities": [
@@ -36,6 +58,7 @@
   {
     "title": "ITDA Portal",
     "date": "Jan 2024 - Jun 2024",
+    "associatedWith": "Government of Uttarakhand",
     "techStack": "Next.Js, Prisma.Js, tRPC, TypeScript, ShadCN UI, MongoDB, Excel",
     "description": "The ITDA drives ICT projects for Digital Uttarakhand, enhancing citizen life and transparency.",
     "responsibilities": [
@@ -50,6 +73,7 @@
   {
     "title": "E-Shop",
     "date": "Apr 2023 - Apr 2023",
+    "associatedWith": "Personal Project",
     "techStack": "React, TypeScript, Node.js, Express.js, Chakra UI, MongoDB",
     "description": "A fully functional Indian e-commerce web application allowing users to browse and purchase products.",
     "responsibilities": [
@@ -72,6 +96,7 @@
   {
     "title": "Blij-Mart",
     "date": "Jan 2023 - Feb 2023",
+    "associatedWith": "Freelance",
     "techStack": "JavaScript, HTML, CSS, Bootstrap",
     "description": "Blij-Mart is an e-commerce website where you can purchase a variety of products.",
     "responsibilities": [

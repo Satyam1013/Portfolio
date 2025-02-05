@@ -21,6 +21,10 @@ import {
   SiJavascript,
   SiChakraui,
   SiReact,
+  SiDocker,
+  SiRedis,
+  SiPostgresql,
+  SiSupabase,
 } from "react-icons/si";
 import { motion } from "framer-motion";
 
@@ -32,7 +36,7 @@ const skills = [
   { name: "MongoDB", icon: <SiMongodb className="text-designColor" /> },
   { name: "Prisma", icon: <SiPrisma className="text-designColor" /> },
   { name: "Express JS", icon: <SiExpress className="text-designColor" /> },
-  { name: "Zod | Yup", icon: <FaCode className="text-designColor" /> },
+  { name: "Zod | Yup | Joi", icon: <FaCode className="text-designColor" /> },
   { name: "Node JS", icon: <FaNodeJs className="text-designColor" /> },
   {
     name: "Tailwind CSS",
@@ -48,6 +52,11 @@ const skills = [
   { name: "Chakra UI", icon: <SiChakraui className="text-designColor" /> },
   { name: "ShadCN UI", icon: <FaDatabase className="text-designColor" /> },
   { name: "Redux", icon: <SiRedux className="text-designColor" /> },
+
+  { name: "Docker", icon: <SiDocker className="text-designColor" /> },
+  { name: "Redis", icon: <SiRedis className="text-designColor" /> },
+  { name: "PostgreSQL", icon: <SiPostgresql className="text-designColor" /> },
+  { name: "Supabase", icon: <SiSupabase className="text-designColor" /> },
 ];
 
 const directionStyles = [
@@ -89,7 +98,7 @@ export default function AboutMe() {
     "
           >
             {splitTextToWords(
-              `Hello, I am a Software Developer with 2+ years of hands-on experience in designing dynamic websites and building scalable applications. My expertise extends to data structures and algorithms, enabling me to solve complex challenges with efficient solutions. Currently, I am a key contributor at Prodios Labs, where I work on strategic government projects for Uttarakhand. I specialize in delivering high-impact, scalable solutions that align with business goals and create tangible value.`
+              `Hello, I am a Software Developer with 2+ years of hands-on experience in designing dynamic websites and building scalable applications. My expertise extends to data structures and algorithms, enabling me to solve complex challenges with efficient solutions. Currently, I am a key contributor at Prodios Labs, where I work on strategic government projects for Uttarakhand. Additionally, I have a robust freelancing background, having collaborated with both local and international clients to deliver custom software solutions and dynamic web applications. I specialize in delivering high-impact, scalable solutions that align with business goals and create tangible value.`
             )}
           </p>
         </div>

@@ -11,7 +11,9 @@ interface ProjectCardProps {
   githubLink: string;
   liveLink: string;
   images: string[];
+  associatedWith?: string; // New prop for association
 }
+
 export const ProjectCard = ({
   title,
   date,
@@ -21,6 +23,7 @@ export const ProjectCard = ({
   githubLink,
   liveLink,
   images,
+  associatedWith,
 }: ProjectCardProps) => {
   return (
     <motion.div
@@ -57,6 +60,20 @@ export const ProjectCard = ({
               >
                 {description}
               </motion.p>
+
+              {associatedWith && (
+                <motion.div
+                  className="bg-gray-800 text-white px-4 py-2 rounded-md inline-block"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.4 }}
+                >
+                  <span className="font-semibold text-designColor">
+                    Associated with:
+                  </span>{" "}
+                  {associatedWith}
+                </motion.div>
+              )}
             </div>
           </div>
 
